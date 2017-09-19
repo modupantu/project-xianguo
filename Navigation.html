@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>北京鲜果时光</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="shortcut icon" href="images/header.ico" type="image/x-icon">
+    <meta name="keywords" content="鲜果时光加盟|鲜果时光历程|鲜果时光产品|鲜果时光店铺风格|鲜果时光成功案例|鲜果时光加盟条件|鲜果时光加盟电话 ">
+    <meta name="description" content="北京鲜果时光餐饮管理有限公司【免费咨询:400-6199-517】主要负责鲜果时光产品研发、鲜果时光在全国店铺分布、介绍鲜果时光加盟条件、鲜果时光店铺装修风格升级等事项。是一家专注鲜榨果汁、现调奶茶、正宗奶昔奶茶等系列加盟的健康时尚饮品研发公司。把最新的鲜果时光升级资讯、鲜果最新研发产品、鲜果加盟成功案例在第一时间分享给大众！">
+    <link rel="stylesheet" href="css/Navigation.css">
+    <script type="text/javascript">
+        window.onload = function() {
+            var oDiv = document.getElementById('div1');
+            var aA = document.getElementsByTagName('a');
+            var i = 0;
+            for (i = 0; i < aA.length; i++) {
+                aA[i].pause = 1;
+                aA[i].time = null;
+                initialize(aA[i]);
+                aA[i].onmouseover = function() {
+                    this.pause = 0;
+                };
+                aA[i].onmouseout = function() {
+                    this.pause = 1;
+                };
+            };
+            setInterval(starmove, 24);
+    
+            function starmove() {
+                for (i = 0; i < aA.length; i++) {
+                    if (aA[i].pause) {
+                        domove(aA[i]);
+                    }
+                }
+            };
+    
+            function domove(obj) {
+                if (obj.offsetTop <= -obj.offsetHeight) {
+                    obj.style.top = oDiv.offsetHeight + "px";
+                    initialize(obj);
+                } else {
+                    obj.style.top = obj.offsetTop - obj.ispeed + "px";
+                }
+            };
+    
+            function initialize(obj) {
+                var iLeft = parseInt(Math.random() * oDiv.offsetWidth);
+                var scale = Math.random() * 1 + 1;
+                var iTimer = parseInt(Math.random() * 1500);
+                obj.pause = 0;
+    
+                obj.style.fontSize = 12 * scale + 'px';
+    
+                if ((iLeft - obj.offsetWidth) > 0) {
+                    obj.style.left = iLeft - obj.offsetWidth + "px";
+                } else {
+                    obj.style.left = iLeft + "px";
+                }
+                clearTimeout(obj.time);
+                obj.time = setTimeout(function() {
+                    obj.pause = 1;
+                }, iTimer);
+                obj.ispeed = Math.ceil(Math.random() * 4) + 1;
+            }
+        };
+        </script>
+</head>
+
+<body>
+    <div id="div1">
+            <a href="index.html" target="_blank">鲜果时光</a>
+            <a href="jionWe.html" target="_blank">招商加盟</a>
+            <a href="CpProfile.html" target="_blank">关于我们</a>
+            <a href="CpProfile.html" target="_blank">公司介绍</a>
+            <a href="List.html" target="_blank">产品介绍</a>
+            <a href="about.html" target="_blank">技术支持</a>
+            <a href="about.html" target="_blank">服务支持</a>
+            <a href="about.html" target="_blank">店铺设计</a>
+            <a href="CpProfile.html" target="_blank">品牌优势</a>
+            <a href="contact.html" target="_blank">联系我们</a>
+            <a href="feedback.html" target="_blank">在线留言</a>
+            <a href="jionWe.html" target="_blank">加盟流程</a>
+            <a href="about.html" target="_blank">广告投放</a>
+            <a href="about.html" target="_blank">运营指导</a>
+            <a href="about.html" target="_blank">实战培训</a>
+            <a href="CpProfile.html" target="_blank">品牌简介</a>
+            <a href="news.html" target="_blank">公司动态</a>
+    </div>
+    <script type="text/javascript" color="41, 195, 46" opacity='1' zIndex="-2" count="200" src="js/canvas.js"></script>
+</body>
+
+</html>
